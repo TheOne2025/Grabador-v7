@@ -732,18 +732,26 @@ namespace MacroRecorderPro
 
         private void UpdateRecordingStatus()
         {
-            if (recordingStatusLabel != null)
+            if (recordingStatusLabel == null)
+                return;
+
+            if (_recordingService.IsRecording)
             {
-                if (_recordingService.IsRecording)
+                if (_recordingService.IsPaused)
+                {
+                    recordingStatusLabel.Text = "⏸ Pausado";
+                    recordingStatusLabel.ForeColor = Color.Orange;
+                }
+                else
                 {
                     recordingStatusLabel.Text = "● Grabando...";
                     recordingStatusLabel.ForeColor = Color.Red;
                 }
-                else
-                {
-                    recordingStatusLabel.Text = "● Listo para grabar";
-                    recordingStatusLabel.ForeColor = Color.LightGreen;
-                }
+            }
+            else
+            {
+                recordingStatusLabel.Text = "● Listo para grabar";
+                recordingStatusLabel.ForeColor = Color.LightGreen;
             }
         }
 
@@ -765,9 +773,5 @@ namespace MacroRecorderPro
             this.ResumeLayout(false);
         }
     }
-} if (_recordingService.IsPaused)
-                {
-                    recordingStatusLabel.Text = "⏸ Pausado";
-                    recordingStatusLabel.ForeColor = Color.Orange;
-                }
-                else
+}
+
