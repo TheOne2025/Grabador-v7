@@ -343,7 +343,7 @@ namespace MacroRecorderPro
             };
             contentPanel.Controls.Add(analyticsPanel);
 
-            filesPanel = new FilesPanel(_fileManagerService)
+            filesPanel = new FilesPanel(_recordingService)
             {
                 Size = contentPanel.ClientSize,
                 Location = new Point(0, 0),
