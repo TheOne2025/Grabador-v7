@@ -7,7 +7,7 @@ using MacroRecorderPro.Services;
 
 namespace MacroRecorderPro.Controls
 {
-    public partial class RecordingPanel : UserControl
+    public partial class FilesPanel : UserControl
     {
         private readonly MacroRecordingService recordingService;
         
@@ -27,7 +27,7 @@ namespace MacroRecorderPro.Controls
         private CheckBox recordKeyboardCheckBox;
         private CheckBox recordScrollCheckBox;
 
-        public RecordingPanel(MacroRecordingService recordingService)
+        public FilesPanel(MacroRecordingService recordingService)
         {
             this.recordingService = recordingService;
             InitializeComponent();

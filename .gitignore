@@ -1,0 +1,5 @@
+# Ignore Visual Studio files
+.vs/
+obj/
+bin/
+packages-microsoft-prod.deb
