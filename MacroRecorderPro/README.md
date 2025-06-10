@@ -33,7 +33,7 @@ Install-Package FontAwesome.Sharp -Version 6.3.0
 Install-Package Newtonsoft.Json -Version 13.0.3
 Install-Package System.Drawing.Common -Version 7.0.0
 Install-Package NAudio -Version 2.2.1
-Install-Package GlobalMouseKeyHook -Version 5.6.0
+Install-Package MouseKeyHook -Version 5.6.0
 ```
 
 ### 3. Crear Estructura de Carpetas
@@ -112,7 +112,7 @@ Uninstall-Package FontAwesome.Sharp
 Install-Package FontAwesome.Sharp -Version 6.3.0
 ```
 
-### Error: "GlobalMouseKeyHook no encontrado"
+### Error: "MouseKeyHook no encontrado"
 ```bash
 # Instalar dependencias adicionales
 Install-Package System.Windows.Forms
